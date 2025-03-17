@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:profile_app/core/Widget%20reuse/manager/Navigation%20Cubit/navigation_cubit.dart';
 import 'package:profile_app/core/Widget%20reuse/Bottom_navigation_icon.dart';
 import 'package:profile_app/const.dart';
+import 'package:profile_app/core/utils/app_router.dart';
 
 class CustomBottomNavBar extends StatelessWidget {
   const CustomBottomNavBar({super.key});
@@ -38,10 +40,16 @@ class CustomBottomNavBar extends StatelessWidget {
                   isSelected: state == 2,
                 ),
                 BottomNavigationIcon(
-                  icon: Icons.person,
-                  index: 3,
-                  isSelected: state == 3,
-                ),
+  icon: Icons.person,
+  index: 3,
+  isSelected: state == 3,
+  onTap: () {
+    context.read<NavigationCubit>().updateIndex(3);
+    context.go(AppRouter.kProfileView);
+  },
+),
+
+
               ],
             ),
           ),

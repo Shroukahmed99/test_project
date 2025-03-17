@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:profile_app/Features/Profile%20User/presentation/views/Widgets/custom_bottom.dart';
-import 'package:profile_app/Features/Profile%20User/presentation/views/Widgets/password_settings_view.dart';
+import 'package:profile_app/Features/Profile%20User/presentation/views/password_settings_view.dart';
 import 'package:profile_app/core/Widget%20reuse/form_field_widget.dart';
 import 'package:profile_app/core/function/validate_function.dart';
 import 'package:profile_app/const.dart';
@@ -78,7 +78,7 @@ class ProfileFormWidget extends StatelessWidget {
                onPressed: () {
     Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => ForgetPasswordView()),
+      MaterialPageRoute(builder: (context) => const PasswordSettingsView()),
     );
               },
               backgroundColor: accentColor,

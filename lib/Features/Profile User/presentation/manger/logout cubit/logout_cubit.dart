@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:profile_app/Features/Profile%20User/presentation/manger/logout%20cubit/logout_state.dart';
+import 'package:profile_app/Features/Profile%20User/presentation/manger/Logout%20Cubit/logout_state.dart';
 
 class LogoutCubit extends Cubit<LogoutState> {
   LogoutCubit() : super(LogoutInitial());
@@ -7,9 +7,7 @@ class LogoutCubit extends Cubit<LogoutState> {
   Future<void> logout() async {
     emit(LogoutLoading());
     try {
-      // هنا يمكنك إضافة منطق تسجيل الخروج الفعلي
-      // مثل: await authRepository.logout();
-      await Future.delayed(const Duration(seconds: 1)); // محاكاة لعملية تسجيل الخروج
+      await Future.delayed(const Duration(seconds: 1));
       emit(LogoutSuccess());
     } catch (e) {
       emit(LogoutError(e.toString()));

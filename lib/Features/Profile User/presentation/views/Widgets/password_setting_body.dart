@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:profile_app/Features/Profile%20User/presentation/views/Widgets/custom_bottom.dart';
+import 'package:profile_app/Features/Profile%20User/presentation/views/password_settings_view.dart';
+import 'package:profile_app/Features/Profile%20User/presentation/views/setting_profile_view.dart';
 import 'package:profile_app/core/Widget%20reuse/buttom_text_forget_password.dart';
 import 'package:profile_app/core/Widget%20reuse/custom_text_and_icon_arrowBack.dart';
 import 'package:profile_app/core/Widget%20reuse/form_field_widget.dart';
-import 'package:profile_app/Features/Profile%20User/presentation/views/Widgets/profile_navigation_widget.dart';
 import 'package:profile_app/const.dart';
 import 'package:profile_app/core/function/validate_function.dart';
 
@@ -69,7 +70,7 @@ class PasswordSettingBody extends StatelessWidget {
                   
                   Navigator.push(
       context,
-      MaterialPageRoute(builder: (context) => ProfileNavigationWidget()),
+      MaterialPageRoute(builder: (context) => SettingProfileView()),
     );
                   if (formKey.currentState!.validate()) {
                     // Handle password change logic here
